@@ -17,11 +17,11 @@ jobs:
       with:
         azcliversion: latest
         inlineScript: |
-          az group show --name 
+          az group show --name ${{ vars.RG_VARIABLE }}
 
     - name: Azure PowerShell action
       uses: azure/powershell@v2
       with:
         azPSVersion: latest
         inlineScript: |
-          Get-AzResourceGroup -Name 
+          Get-AzResourceGroup -Name ${{ vars.RG_VARIABLE }}
